@@ -16,6 +16,7 @@ from tle import constants
 from tle.util import codeforces_common as cf_common
 from tle.util import discord_common, font_downloader
 
+from keep_alive import keep_alive
 
 def setup():
     # Make required directories.
@@ -58,7 +59,8 @@ def main():
         constants.ALLOW_DUEL_SELF_REGISTER = bool(distutils.util.strtobool(allow_self_register))
 
     setup()
-    
+    keep_alive()
+
     intents = discord.Intents.default()
     intents.members = True
 
