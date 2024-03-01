@@ -16,7 +16,7 @@ while true; do
     poetry install
     FONTCONFIG_FILE=$PWD/extra/fonts.conf poetry run python -m tle
 
-    (( $? != 42 )) && break
+    # (( $? != 42 )) && break
 
     echo '==================================================================='
     echo '=                       Restarting                                ='
